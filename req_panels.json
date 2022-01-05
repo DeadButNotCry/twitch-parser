@@ -1,0 +1,14 @@
+[
+  {
+    "extensions": {
+      "persistedQuery": {
+        "sha256Hash": "c388999b5fcd8063deafc7f7ad32ebd1cce3d94953c20bf96cffeef643327322",
+        "version": 1
+      }
+    },
+    "operationName": "ChannelPanels",
+    "variables": {
+      "id": ""
+    }
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "extensions": {
+      "persistedQuery": {
+        "sha256Hash": "d5c5df7ab9ae65c3ea0f225738c08a36a4a76e4c6c31db7f8c4b8dc064227f9e",
+        "version": 1
+      }
+    },
+    "operationName": "DirectoryPage_Game",
+    "variables": {
+      "cursor": "",
+      "limit": 30,
+      "name": "counter-strike: global offensive",
+      "options": {
+        "recommendationsContext": {
+          "platform": "web"
+        },
+        "requestID": "JIRA-VXP-2397",
+        "sort": "RELEVANCE",
+        "tags": [
+          "0569b171-2a2b-476e-a596-5bdfb45a1327"
+        ]
+      },
+      "sortTypeIsRecency": true
+    }
+  }
+]
