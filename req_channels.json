@@ -16,7 +16,7 @@
           "platform": "web"
         },
         "requestID": "JIRA-VXP-2397",
-        "sort": "RELEVANCE",
+        "sort": "VIEWER_COUNT_ASC",
         "tags": [
           "0569b171-2a2b-476e-a596-5bdfb45a1327"
         ]

@@ -15,10 +15,11 @@ def collect_channels():
         json_to_req = json.load(file)
     page = 1
     while True:
+        print("Take data on page", page)
         json_to_req[0]["variables"]["cursor"] = cursor
         response = requests.post(url=url, headers={
             "user-agent": f"{ua.random}", "Client-Id": "kimne78kx3ncx6brgo4mv6wki5h1ko"},
-                                 json=json_to_req)
+            json=json_to_req)
         data = response.json()
         streams = data[0]["data"]["game"]["streams"]["edges"]
         cursor = streams[-1]['cursor']
@@ -28,21 +29,20 @@ def collect_channels():
             streamer = stream["node"]["broadcaster"]["login"]
             stream_link = f"https://www.twitch.tv/{streamer}"
             streamer_id = stream["node"]["broadcaster"]["id"]
+            
             result.append(
                 {
                     "count_of_viewers": count_of_viewers,
                     "title": title,
                     "streamer": streamer,
                     "link": stream_link,
-                    "id": streamer_id
+                     "id": streamer_id
                 }
             )
-        if page == 5:
+        if count_of_viewers > 50:
             break
         page += 1
         time.sleep(0.5)
-        print("Take data on page", page)
-    result.reverse()
     with open("channels.json", "w", encoding="utf-8") as file:
         json.dump(result, file, indent=4, ensure_ascii=False)
     print("Count of streamers = ", len(result))
