@@ -7,7 +7,7 @@ from aiogram.utils.markdown import hbold, hlink
 
 from link_parser import collect_links
 
-bot = Bot(token="5007015200:AAEbpSuOiHOvx-kYl5PRvK2V7d3d14Nqi04",
+bot = Bot(token="",
           parse_mode=types.ParseMode.HTML)
 dp = Dispatcher(bot)
 
